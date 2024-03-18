@@ -1,0 +1,9 @@
+%%Identification
+%%The package identifies itself and the LaTeX version needed
+\NeedsTeXFormat{LaTeX2e}
+\ProvidesPackage{rigiddesignator}[Common rigid designators for philosophers]
+
+\RequirePackage{chemformula,xstring}
+
+\newcommand{\rigiddesignator}[1]
+{\IfSubStr{#1}{H2O}{\ch{#1}}{#1}}
